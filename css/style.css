@@ -129,6 +129,11 @@ section h2 {
   border-radius: 9px;
 }
 
+.item-wrap,
+.item-wrap * {
+  cursor: pointer;
+}
+
 .item-wrap:first-of-type {
   margin-left: 19px;
 }
@@ -179,18 +184,22 @@ section h2 {
   margin-top: 8px;
 }
 
-/*         JAVASCRIPT          */
 .item-selected {
-  border:5px solid #32B72F;
+  border: 5px solid #32b72f;
 }
 
 .icon {
   position: absolute;
   font-size: 19px;
-  color: #32B72F;
+  color: #32b72f;
 
   right: 12px;
   bottom: 14px;
+}
+
+.button-active {
+  background-color: #32b72f !important;
+  cursor: pointer;
 }
 
 .display-none {
