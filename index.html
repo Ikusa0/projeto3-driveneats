@@ -9,15 +9,37 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
+    <div class="order display-none">
+      <h3>Confirme seu pedido</h3>
+      <div id="prato">
+        <span>Frango Yin Yang</span>
+        <span>14,90</span>
+      </div>
+      <div id="bebida">
+        <span>Coquinha gelada</span>
+        <span>4,90</span>
+      </div>
+      <div id="sobremesa">
+        <span>Pudim</span>
+        <span>7,90</span>
+      </div>
+      <div id="total">
+        <span>TOTAL</span>
+        <span>R$ 27,70</span>
+      </div>
+      <button onclick="makeOrder()">Tudo certo, pode pedir!</button>
+      <button onclick="cancelOrder()">Cancelar</button>
+    </div>
+    <div class="background display-none"></div>
     <div class="header">
       <h1 class="font-righteous">DrivenEats</h1>
       <h3>Sua comida em 6 minutos</h3>
     </div>
     <div class="footer">
-      <button>Selecione os 3 itens para fechar seu pedido</button>
+      <button disabled onclick="openOrderDialog()">Selecione os 3 itens para fechar seu pedido</button>
     </div>
     <div class="webpage">
-      <section>
+      <section id="prato">
         <h2 class="font-righteous">Primeiro, seu prato</h2>
         <div class="slider-container">
           <div class="item-wrap">
@@ -34,7 +56,7 @@
             <div class="item-description">
               <h4>Frango Yin Yang</h4>
               <h6>Um pouco de batata, um pouco de salada</h6>
-              <h5>R$ 14,90</h5>
+              <h5>R$ 12,30</h5>
             </div>
             <ion-icon class="icon display-none" name="checkmark-circle"></ion-icon>
           </div>
@@ -43,7 +65,7 @@
             <div class="item-description">
               <h4>Frango Yin Yang</h4>
               <h6>Um pouco de batata, um pouco de salada</h6>
-              <h5>R$ 14,90</h5>
+              <h5>R$ 11,50</h5>
             </div>
             <ion-icon class="icon display-none" name="checkmark-circle"></ion-icon>
           </div>
@@ -52,7 +74,7 @@
             <div class="item-description">
               <h4>Frango Yin Yang</h4>
               <h6>Um pouco de batata, um pouco de salada</h6>
-              <h5>R$ 14,90</h5>
+              <h5>R$ 10,75</h5>
             </div>
             <ion-icon class="icon display-none" name="checkmark-circle"></ion-icon>
           </div>
@@ -61,13 +83,13 @@
             <div class="item-description">
               <h4>Frango Yin Yang</h4>
               <h6>Um pouco de batata, um pouco de salada</h6>
-              <h5>R$ 14,90</h5>
+              <h5>R$ 15,80</h5>
             </div>
             <ion-icon class="icon display-none" name="checkmark-circle"></ion-icon>
           </div>
         </div>
       </section>
-      <section>
+      <section id="bebida">
         <h2 class="font-righteous">Agora, sua bebida</h2>
         <div class="slider-container">
           <div class="item-wrap">
@@ -75,7 +97,7 @@
             <div class="item-description">
               <h4>Coquinha gelada</h4>
               <h6>Lata 350ml</h6>
-              <h5>R$ 4,90</h5>
+              <h5>R$ 5,99</h5>
             </div>
             <ion-icon class="icon display-none" name="checkmark-circle"></ion-icon>
           </div>
@@ -84,7 +106,7 @@
             <div class="item-description">
               <h4>Coquinha gelada</h4>
               <h6>Lata 350ml</h6>
-              <h5>R$ 4,90</h5>
+              <h5>R$ 4,40</h5>
             </div>
             <ion-icon class="icon display-none" name="checkmark-circle"></ion-icon>
           </div>
@@ -93,7 +115,7 @@
             <div class="item-description">
               <h4>Coquinha gelada</h4>
               <h6>Lata 350ml</h6>
-              <h5>R$ 4,90</h5>
+              <h5>R$ 2,10</h5>
             </div>
             <ion-icon class="icon display-none" name="checkmark-circle"></ion-icon>
           </div>
@@ -102,7 +124,7 @@
             <div class="item-description">
               <h4>Coquinha gelada</h4>
               <h6>Lata 350ml</h6>
-              <h5>R$ 4,90</h5>
+              <h5>R$ 1,75</h5>
             </div>
             <ion-icon class="icon display-none" name="checkmark-circle"></ion-icon>
           </div>
@@ -111,13 +133,13 @@
             <div class="item-description">
               <h4>Coquinha gelada</h4>
               <h6>Lata 350ml</h6>
-              <h5>R$ 4,90</h5>
+              <h5>R$ 10,90</h5>
             </div>
             <ion-icon class="icon display-none" name="checkmark-circle"></ion-icon>
           </div>
         </div>
       </section>
-      <section>
+      <section id="sobremesa">
         <h2 class="font-righteous">Por fim, sua sobremesa</h2>
         <div class="slider-container">
           <div class="item-wrap">
@@ -134,7 +156,7 @@
             <div class="item-description">
               <h4>Pudim</h4>
               <h6>Apenas pudim</h6>
-              <h5>R$ 7,90</h5>
+              <h5>R$ 8,30</h5>
             </div>
             <ion-icon class="icon display-none" name="checkmark-circle"></ion-icon>
           </div>
@@ -143,7 +165,7 @@
             <div class="item-description">
               <h4>Pudim</h4>
               <h6>Apenas pudim</h6>
-              <h5>R$ 7,90</h5>
+              <h5>R$ 9,99</h5>
             </div>
             <ion-icon class="icon display-none" name="checkmark-circle"></ion-icon>
           </div>
@@ -152,7 +174,7 @@
             <div class="item-description">
               <h4>Pudim</h4>
               <h6>Apenas pudim</h6>
-              <h5>R$ 7,90</h5>
+              <h5>R$ 1,80</h5>
             </div>
             <ion-icon class="icon display-none" name="checkmark-circle"></ion-icon>
           </div>
@@ -161,7 +183,7 @@
             <div class="item-description">
               <h4>Pudim</h4>
               <h6>Apenas pudim</h6>
-              <h5>R$ 7,90</h5>
+              <h5>R$ 2,00</h5>
             </div>
             <ion-icon class="icon display-none" name="checkmark-circle"></ion-icon>
           </div>
