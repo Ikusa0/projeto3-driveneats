@@ -90,8 +90,10 @@ function resetOrder() {
 
 // Send a whatsapp message with order's information
 function makeOrder() {
-  const name = prompt("Antes de prosseguir, por favor informe seu nome: ");
-  const address = prompt("Por favor, informe também o endereço: ");
+  let name = prompt("Antes de prosseguir, por favor informe seu nome: ");
+  if (!name) name = "não informado.";
+  let address = prompt("Por favor, informe também o endereço: ");
+  if (!address) address = "não informado.";
   const message = encodeURIComponent(`Olá, gostaria de fazer o pedido:
 - Prato: ${order.prato.name}
 - Bebida: ${order.bebida.name}
