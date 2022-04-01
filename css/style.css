@@ -145,6 +145,7 @@ body {
 
 .footer button {
   width: 364px;
+  min-width: 364px;
   height: 61px;
 
   background-color: #cbcbcb;
