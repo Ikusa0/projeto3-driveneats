@@ -43,6 +43,10 @@ body {
   color: white;
 }
 
+.order button {
+  cursor: pointer;
+}
+
 .order div:last-of-type,
 .order h3,
 .order button:first-of-type {
@@ -50,7 +54,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   letter-spacing: 0.018em;
-  color: white
+  color: white;
 }
 
 .order button:first-of-type {
@@ -267,6 +271,7 @@ section h2 {
 
 .item-selected {
   border: 5px solid #32b72f;
+  padding: 13px 6px;
 }
 
 .icon {
@@ -285,4 +290,15 @@ section h2 {
 
 .display-none {
   display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .slider-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slider-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
