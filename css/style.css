@@ -5,7 +5,7 @@ body {
   background-color: #eee;
 }
 
-.order {
+.order-dialog {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -28,11 +28,11 @@ body {
   padding: 21px 25px;
 }
 
-.order h3 {
+.order-dialog h3 {
   align-self: center;
 }
 
-.order div {
+.order-dialog div {
   display: flex;
   justify-content: space-between;
 
@@ -43,13 +43,13 @@ body {
   color: white;
 }
 
-.order button {
+.order-dialog button {
   cursor: pointer;
 }
 
-.order div:last-of-type,
-.order h3,
-.order button:first-of-type {
+.order-dialog div:last-of-type,
+.order-dialog h3,
+.order-dialog button:first-of-type {
   font-weight: 700;
   font-size: 22px;
   line-height: 26px;
@@ -57,7 +57,7 @@ body {
   color: white;
 }
 
-.order button:first-of-type {
+.order-dialog button:first-of-type {
   width: 100%;
   height: 52px;
 
@@ -67,7 +67,7 @@ body {
   border-radius: 100px;
 }
 
-.order button:last-of-type {
+.order-dialog button:last-of-type {
   background-color: transparent;
   border: none;
   color: white;

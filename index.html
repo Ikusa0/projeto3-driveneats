@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <div class="order display-none">
+    <div class="order-dialog display-none">
       <h3>Confirme seu pedido</h3>
       <div id="prato">
         <span>Frango Yin Yang</span>
@@ -39,9 +39,9 @@
       <button disabled onclick="openOrderDialog()">Selecione os 3 itens para fechar seu pedido</button>
     </div>
     <div class="webpage">
-      <section id="prato">
+      <section>
         <h2 class="font-righteous">Primeiro, seu prato</h2>
-        <div class="slider-container">
+        <div id="prato" class="slider-container">
           <div class="item-wrap">
             <img src="/img/chicken-enchilada.webp" />
             <div class="item-description">
@@ -89,9 +89,9 @@
           </div>
         </div>
       </section>
-      <section id="bebida">
+      <section>
         <h2 class="font-righteous">Agora, sua bebida</h2>
-        <div class="slider-container">
+        <div id="bebida" class="slider-container">
           <div class="item-wrap">
             <img src="/img/cola-drink.webp" />
             <div class="item-description">
@@ -139,9 +139,9 @@
           </div>
         </div>
       </section>
-      <section id="sobremesa">
+      <section>
         <h2 class="font-righteous">Por fim, sua sobremesa</h2>
-        <div class="slider-container">
+        <div id="sobremesa" class="slider-container">
           <div class="item-wrap">
             <img src="/img/quince-dessert.webp" />
             <div class="item-description">
